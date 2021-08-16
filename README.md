@@ -22,4 +22,6 @@ where there are 2 parameters:
 first parameter: datasets, and 0 for davis, 1 for kiba;
 second parameter: gpu number, the selected gpu, change the script if you have more gpus than two.
 
+There several models trained by us in models directory, just set the epoch = 0 to reproduce our result.
+
 The codes are based on GNN, which are easy to entend to your demands (even struture-based methods). You can change the codes according to your needs.
