@@ -5,7 +5,7 @@ The first thing to do for WGNN_DTA is to construct the protein weighted graph, w
  python graph_prepare.py '''
 And the script can generate graphs for 4 datasets, which are human, celegants, davis and kiba, just simply edit the dataset name in the script.
 ## 2.Run CPI training
-' python train_cpi.py 0 0 0 '
+··· python train_cpi.py 0 0 0 ···
 where there are 3 parameters:
 first parameter: datasets, and 0 for human, 1 for celegants;
 second parameter: gpu number, the selected gpu, change the script if you have more gpus than two;
