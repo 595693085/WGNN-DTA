@@ -92,11 +92,10 @@ class DTADataset(InMemoryDataset):
 
 
 # training function at each epoch
-def train(model, device, train_loader, optimizer, epoch, TRAIN_BATCH_SIZE=512):
+def train(model, device, train_loader, optimizer, epoch, loss_fn, TRAIN_BATCH_SIZE=512):
     print('Training on {} samples...'.format(len(train_loader.dataset)))
     model.train()
     LOG_INTERVAL = 10
-    loss_fn = torch.nn.MSELoss()
     for batch_idx, data in enumerate(train_loader):
         data_mol = data[0].to(device)
         data_pro = data[1].to(device)
@@ -127,6 +126,7 @@ def predicting(model, device, loader):
             total_preds = torch.cat((total_preds, output.cpu()), 0)
             total_labels = torch.cat((total_labels, data_mol.y.view(-1, 1).cpu()), 0)
     return total_labels.numpy().flatten(), total_preds.numpy().flatten()
+
 
 # prepare the protein and drug pairs
 def collate(data_list):
