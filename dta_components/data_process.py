@@ -448,7 +448,7 @@ def create_CPI_dataset(dataset='human', ratio_n=1):
     train_set, dataset_ = used_entries[:n], used_entries[n:]
     ratio = 0.5
     n = int(ratio * len(used_entries))
-    dev_set, test_set = used_entries[:n], used_entries[n:]
+    dev_set, test_set = dataset_[:n], dataset_[n:]
 
     process_dir = os.path.join('./', 'pre_process')
     pro_distance_dir = os.path.join(process_dir, dataset, 'distance_map')  # numpy .npy file
