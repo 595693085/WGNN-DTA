@@ -433,7 +433,7 @@ def create_CPI_dataset(dataset='human', ratio_n=1):
         print("number of used entries:", len(used_entries), "number of positive:", L, "number of negative:", 3 * L)
     if ratio_n == 5:
         L = int(len(all_n_entries) / 5.0)
-        used_entries = all_p_entries[:L] + all_n_entries[:3 * L]
+        used_entries = all_p_entries[:L] + all_n_entries[:5 * L]
         random.shuffle(used_entries)
         print("number of used entries:", len(used_entries), "number of positive:", L, "number of negative:", 5 * L)
 
