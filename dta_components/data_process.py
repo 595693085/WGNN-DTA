@@ -447,7 +447,7 @@ def create_CPI_dataset(dataset='human', ratio_n=1):
     n = int(ratio * len(used_entries))
     train_set, dataset_ = used_entries[:n], used_entries[n:]
     ratio = 0.5
-    n = int(ratio * len(used_entries))
+    n = int(ratio * len(dataset_))
     dev_set, test_set = dataset_[:n], dataset_[n:]
 
     process_dir = os.path.join('./', 'pre_process')
