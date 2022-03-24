@@ -76,8 +76,9 @@ for dataset in CPIdatasets:
     test_auc = roc_auc_score(test_T, test_P)
     test_recall = recall_score(test_T, np.where(test_P >= 0.5, 1, 0))
     test_precision = precision_score(test_T, np.where(test_P >= 0.5, 1, 0))
+    test_f1_score=f1_score(test_T, np.where(test_P >= 0.5, 1, 0))
     result_str = 'test result:' + '\n' + 'test_auc:' + str(test_auc) + '\n' + 'test_recall:' + str(
-        test_recall) + '\n' + 'test_precision:' + str(test_precision) + '\n'
+        test_recall) + '\n' + 'test_precision:' + str(test_precision) + '\n'+ 'test_f1_core:' + str(test_f1_score) + '\n'
 
     print(result_str)
 
