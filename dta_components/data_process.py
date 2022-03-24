@@ -484,7 +484,7 @@ def create_CPI_dataset(dataset='human', ratio_n=1):
     test_dataset = DTADataset(root='data', dataset=dataset + '_' + 'test', xd=test_drugs,
                               target_key=test_prots_keys, y=test_Y.astype(float), smile_graph=smile_graph,
                               target_graph=target_graph)
-    temp_y = test_Y.astype(float)
+    # temp_y = test_Y.astype(float) # for test
     # print(type(temp_y))
     return train_dataset, dev_dataset, test_dataset
 
