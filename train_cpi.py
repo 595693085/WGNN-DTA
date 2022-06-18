@@ -9,7 +9,7 @@ from dta_components.data_process import create_CPI_dataset
 from dta_components.utils import *
 from metric import *
 from model import CPI_GCN, CPI_GAT
-from sklearn.metrics import roc_auc_score, precision_score, recall_score
+from sklearn.metrics import roc_auc_score, precision_score, recall_score, f1_score
 
 CPIdatasets = [['human', 'celegans'][int(sys.argv[1])]]
 cuda_name = ['cuda:0', 'cuda:1'][int(sys.argv[2])]
